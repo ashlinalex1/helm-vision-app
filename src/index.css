@@ -2,88 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* 🖤 Luxury Theme — Pure Black Background + Gold Accents + White Text */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 20% 20%;
+    --background: 0 0% 0%; /* Pure black */
+    --foreground: 0 0% 100%; /* Pure white text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 20%;
+    --card: 0 0% 0%; /* Slightly lighter black for cards */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 20%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 205 85% 40%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 46 65% 52%; /* Gold (#D4AF37) */
+    --primary-foreground: 0 0% 0%; /* Black text inside gold buttons */
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 220 20% 20%;
+    --secondary: 42 15% 0%; /* Deep muted beige-gray */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 13% 95%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 80%;
 
-    --accent: 164 94% 52%;
-    --accent-foreground: 220 20% 20%;
+    --accent: 46 65% 52%; /* Gold accent */
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 75% 45%; /* Red for danger */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 205 85% 40%;
+    --border: 0 0% 20%;
+    --input: 0 0% 25%;
+    --ring: 46 65% 52%; /* Gold focus ring */
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 220 20% 20%;
-    --sidebar-primary: 205 85% 40%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 164 94% 52%;
-    --sidebar-accent-foreground: 220 20% 20%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 205 85% 40%;
+    --sidebar-background: 0 0% 0%; /* Black sidebar */
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 46 65% 52%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 46 65% 52%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 0%; /* Stay pure black */
+    --foreground: 0 0% 100%; /* Pure white text */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 205 85% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 46 65% 52%; /* Gold */
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 42 15% 25%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 80%;
 
-    --accent: 164 94% 52%;
-    --accent-foreground: 222.2 84% 4.9%;
+    --accent: 46 65% 52%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 205 85% 50%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 205 85% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 164 94% 52%;
-    --sidebar-accent-foreground: 222.2 84% 4.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 205 85% 50%;
+    --border: 0 0% 20%;
+    --input: 0 0% 25%;
+    --ring: 46 65% 52%;
+
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 46 65% 52%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 46 65% 52%;
   }
 }
 
