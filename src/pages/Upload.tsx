@@ -55,10 +55,29 @@ const Upload = () => {
       });
       
       if (response.data.success) {
+        const imageData = `data:image/png;base64,${response.data.image}`;
+        const detections = response.data.detections;
+        
         setDetectionResult({
-          image: `data:image/png;base64,${response.data.image}`,
-          detections: response.data.detections
+          image: imageData,
+          detections: detections
         });
+        
+        // Save detection to database
+        const { supabase } = await import('@/integrations/supabase/client');
+        const { data: { user } } = await supabase.auth.getUser();
+        
+        if (user) {
+          await supabase.from('detections').insert({
+            user_id: user.id,
+            source: 'upload',
+            image_data: imageData,
+            detected_objects: detections,
+            confidence: detections.length > 0 
+              ? detections.reduce((sum, d) => sum + d.confidence, 0) / detections.length 
+              : null
+          });
+        }
         
         toast({
           title: 'Analysis Complete',
