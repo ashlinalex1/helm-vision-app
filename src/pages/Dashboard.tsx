@@ -43,7 +43,7 @@ const Dashboard = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-foreground">
-            Welcome back, {user?.name}!
+            Welcome back, {user?.email}!
           </h1>
           <p className="text-muted-foreground">
             Monitor your helmet detection system performance

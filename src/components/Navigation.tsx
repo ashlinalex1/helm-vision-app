@@ -41,7 +41,7 @@ export const Navigation = () => {
             ))}
             
             <div className="flex items-center gap-4 border-l pl-6">
-              <span className="text-sm text-muted-foreground">{user?.name}</span>
+              <span className="text-sm text-muted-foreground">{user?.email}</span>
               <Button variant="ghost" size="sm" onClick={logout}>
                 <LogOut className="h-4 w-4" />
               </Button>
