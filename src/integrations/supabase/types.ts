@@ -14,7 +14,104 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      detections: {
+        Row: {
+          confidence: number | null
+          created_at: string
+          detected_objects: Json
+          id: string
+          image_data: string | null
+          session_id: string | null
+          source: string
+          user_id: string
+        }
+        Insert: {
+          confidence?: number | null
+          created_at?: string
+          detected_objects?: Json
+          id?: string
+          image_data?: string | null
+          session_id?: string | null
+          source: string
+          user_id: string
+        }
+        Update: {
+          confidence?: number | null
+          created_at?: string
+          detected_objects?: Json
+          id?: string
+          image_data?: string | null
+          session_id?: string | null
+          source?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "detections_session_id_fkey"
+            columns: ["session_id"]
+            isOneToOne: false
+            referencedRelation: "live_sessions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      live_sessions: {
+        Row: {
+          avg_confidence: number | null
+          avg_fps: number | null
+          ended_at: string | null
+          frames_processed: number
+          helmets_detected: number
+          id: string
+          started_at: string
+          user_id: string
+        }
+        Insert: {
+          avg_confidence?: number | null
+          avg_fps?: number | null
+          ended_at?: string | null
+          frames_processed?: number
+          helmets_detected?: number
+          id?: string
+          started_at?: string
+          user_id: string
+        }
+        Update: {
+          avg_confidence?: number | null
+          avg_fps?: number | null
+          ended_at?: string | null
+          frames_processed?: number
+          helmets_detected?: number
+          id?: string
+          started_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      system_health: {
+        Row: {
+          id: string
+          metric_name: string
+          metric_value: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          metric_name: string
+          metric_value: string
+          status: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          metric_name?: string
+          metric_value?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
