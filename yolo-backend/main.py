@@ -79,8 +79,8 @@ def draw_boxes(image: np.ndarray, detections: list):
     return img_with_boxes
 
 # Load both models once (on startup)
-helmet_model = YOLO(r"C:\Users\ashli\Downloads\best1.pt")
-seatbelt_model = YOLO(r"C:\Users\ashli\Downloads\best2.pt")
+helmet_model = YOLO("best1.pt")
+seatbelt_model = YOLO("best2.pt")
 
 
 @app.post("/predict")
