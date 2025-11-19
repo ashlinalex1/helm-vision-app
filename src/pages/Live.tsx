@@ -6,7 +6,8 @@ import { Video, VideoOff, Circle, AlertCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8080';
+const API_URL = 'https://hopeful-transformation-production-8990.up.railway.app';
+
 
 const Live = () => {
   const [isActive, setIsActive] = useState(false);
